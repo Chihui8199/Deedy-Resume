@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Chi Hui}{Ng}{ \urlstyle{same}\href{https://www.linkedin.com/in/chihui/}{linkedin.com/in/chihui/}| \href{https://github.com/Chihui8199}{github.com/Chihui8199}\\
+\href{https://chihui.netlify.app/}{chihui.netlify.app} | 91689895 | \href{mailto:NGCH0118@e.ntu.edu.sg}{NGCH0118@e.ntu.edu.sg}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Nanyang Technological \\ University}
+\descript{Double Degree Programme Bachelor of Business (with Specialisation in Business Analytics)
+and Bachelor of Engineering (Computer Science)}
+\location{May 2023 | Singapore, SG}
+Distinction\\
+\sectionsep
+
+\subsection{NANYANG JUNIOR COLLEGE}
+\location{GCE A Levels, 5 Distinctions}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Links} 
+%Facebook:// \href{https://facebook/dd}{\bf dd} \\
+%Github:// \href{https://github.com/deedydas}{\bf deedydas} \\
+%LinkedIn://  \href{https://www.linkedin.com/in/debarghyadas}{\bf debarghyadas} \\
+%YouTube://  \href{https://www.youtube.com/user/DeedyDash007}{\bf DeedyDash007} \\
+%Twitter://  \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
+%Quora://  \href{https://www.quora.com/Debarghya-Das}{\bf Debarghya-Das}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\textbullet{}Java 
+\textbullet{}Python 
+\textbullet{}R
+\textbullet{}JavaScript
+\textbullet{}HTML
+\textbullet{}CSS
+\textbullet{}ReactJS
+\textbullet{}Django
+\textbullet{}Git
+\textbullet{}Microsoft Office Suite
+\textbullet{}PowerBI
+\textbullet{}Tableau
+\textbullet{}MySQL
+\textbullet{}NoSQL
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     CO-CURRICULAR ACTIVITIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{CO-CURRICULAR ACTIVITIES}
+
+\runsubsection{Student Entrepreneurship Programme}
+\descript{| Co-Founder }
+\location{May 2021 - Aug 2021}
+Secured \$3000 in funding to work on a sustainable technology startup in food industry 
+
+\sectionsep
+\runsubsection{Welfare Service Club}
+\descript{| Director of Events}
+\location{Aug 2019 - Aug 2021}
+Organized large scale charity and bonding events for >1000 members.Secured \$2000 funding from Housing Development Board for implementation of events at 20 Senior Activity Centers.
+\sectionsep
+
+\sectionsep
+\runsubsection{University YMCA}
+\descript{| Director of Community Service Programme }
+\location{Aug 2019 - Aug 2021}
+Led team of 15 in mentoring of 20 ITE students, prepared marketing materials such as posters, forms, and messages.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Internships
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Internships}
+\runsubsection{Toku}
+\descript{| Software Engineer Intern }
+\location{Aug 2021 - Sept 2021 | Singapore, SG}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Design and build backend software of client contact manager for Toku admins to manage their customer information; Utilizing Django to develop the website whilst hosting the database on MySQL server.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Accredify}
+\descript{| Data Analyst Intern }
+\location{May 2021 – Aug 2021 | Singapore, SG}
+\begin{tightemize}
+\item Designed product metrics and built data pipelines to create interactive dashboards (PowerBI \& Tableau), allowing tracking of internal analytics; reduced time spent on manual data extraction and analysis by 15\%. Value added by providing analysis and recommendation into usage analytics.
+\item Developed API connector to allow data extraction and flow to dashboards for usage and financial reporting.
+\item Wrote browser and unit tests (i.e., Login, Password Reset) for automated testing of software; reduced manual testing time
+by 5\%. Applied industry Git, Jira and UAT practices during development and deployment phases.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{XinCap Group}
+\descript{| Venture Analyst Intern }
+\location{May 2020 – Aug 2020 | Singapore, SG}
+\begin{tightemize}
+\item Headed and established business partnerships with strategic partners resulting in a 112\% increase in MoM sales, 51\% increase in basket value.
+\item Performed Search Engine Marketing by running Ads and A/B testing to track performance and optimise for spend.
+\item Optimised existing dashboards (i.e., inventory, production, sales) and introduced forecasting models (Excel) for demand planning - to predict stock production and allocation.
+\item Improved cemani.sg Shopify website by implementing email subscription pop-up, generating up to 10% more leads.
+
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Academic Projects}
+\runsubsection{Software Systems Analysis \& Design Project}
+\descript{| Educational Huf }
+\location{Aug 2021 – Nov 2021 | Singapore, SG}
+\begin{tightemize}
+\item Developed a web-based educational game that allows users to create quizzes with multiple gaming levels.
+\item Responsible for the front-end development of this project; Designed in-game answers and Ui interaction components utilising React.js. 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Advanced Software Engineering Project}
+\descript{| GoldFolks }
+\location{Aug 2021 – Nov 2021 | Singapore, SG}
+\begin{tightemize}
+\item Developed an all-in-one elderly management application system using Flutter; key features of the app includes ability to set medication reminders, ability to play cognitive games and ability to watch different exercise videos.
+\item Contributed to the whole software development lifecycle by conducting requirement analysis, planning, designing, developing and testing of the assets.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Awards} 
+%\begin{tabular}{rll}
+%2014	     & top 52/2500  & KPCB Engineering Fellow\\
+%2014	     & 1\textsuperscript{st}/50  & Microsoft Coding Competition, Cornell\\
+%2013	     & National  & Jump Trading Challenge Finalist\\
+%2013     & 7\textsuperscript{th}/120 & CS 3410 Cache Race Bot Tournament  \\
+%2012     & 2\textsuperscript{nd}/150 & CS 3110 Biannual Intra-Class Bot Tournament \\
+%2011     & National & Indian National Mathematics Olympiad (INMO) Finalist \\
+%\end{tabular}
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Publications} 
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+%\bibliographystyle{abbrv}
+%\bibliography{publications}
+%\nocite{*}
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
